@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Alpino Variable';
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../public/fonts/Alpino-Variable.woff2') format('woff2-variations');
+}
+ 
+@theme {
+  --font-alpino: 'Alpino Variable', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+}
+body {
+    font-family: var(--font-alpino);
+}
