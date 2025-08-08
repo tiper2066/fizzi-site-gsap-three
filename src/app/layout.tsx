@@ -2,6 +2,7 @@ import { PrismicPreview } from '@prismicio/next';
 import { repositoryName } from '@/prismicio';
 
 import './app.css';
+import Header from '@/components/Header'; // *************************** Header 컴포넌트
 
 export default function RootLayout({
     children,
@@ -10,7 +11,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body>{children}</body>
+            <body className='overflow-x-hidden bg-yellow-300'>
+                {/* ***************************** Header 컴포넌트 추가  */}
+                <Header /> {children}
+            </body>
             <PrismicPreview repositoryName={repositoryName} />
         </html>
     );
