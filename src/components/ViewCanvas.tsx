@@ -1,14 +1,9 @@
 'use client';
 
 import { Canvas } from '@react-three/fiber';
-// import { View } from '@react-three/drei';
-// import { Suspense } from 'react';
-// import dynamic from 'next/dynamic';
-
-// const Loader = dynamic(
-//     () => import('@react-three/drei').then((mod) => mod.Loader),
-//     { ssr: false }
-// );
+// import { SodaCan } from './SodaCan'; //  3D 모델 ******************** 제거
+import { Environment } from '@react-three/drei'; //  3D 모델을 위한 three.js 함수 **************** Float 제거
+import FloatingCan from './FloatingCan'; // ******************************* 캔 컴포넌트
 
 type Props = {};
 
@@ -32,14 +27,22 @@ export default function ViewCanvas({}: Props) {
                     fov: 30, // 작을 수록 큰 객체로 보임
                 }}
             >
-                <mesh rotation={[0.5, 0.5, 0.0]} position={[1, 0, 0]}>
-                    <boxGeometry />
-                    <meshStandardMaterial color={'hotpink'} />
-                </mesh>
-                {/* ****************************** 환경 광원 */}
-                <ambientLight intensity={2} />
-                {/* ****************************** 포인트 광원 */}
-                <spotLight intensity={3} position={[1, 1, 1]} />
+                {/* *********************  SodaCan 컴포넌트와 플로팅 애니메이션 설정 */}
+                <FloatingCan />
+
+                {/* <Float // ********************************************* 컴포넌트화 했으니 제거함 
+                    speed={1} // 움직임 애니메이션 속도, 기본값은 1
+                    rotationIntensity={2} // XYZ 회전 강도, 기본값은 1
+                    floatIntensity={1} // Up/down 강도, floatingRange와 함께 사용되며 기본값은 1
+                    floatingRange={[-0.1, 0.1]} // 위 아래로 움직이는 범위, 기본값 [-0.1, 0.1]
+                >
+                    <SodaCan />
+                </Float> */}
+                {/*  HDRS 조명을 위한 이미지 적용  */}
+                <Environment
+                    files='/hdrs/lobby.hdr'
+                    environmentIntensity={1.5}
+                />
             </Canvas>
             {/* <Loader /> */}
         </>
