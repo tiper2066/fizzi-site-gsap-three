@@ -20,6 +20,68 @@
             "allowTargetBlank": true,
             "single": "heading1"
           }
+        },
+        "subheading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Subheading",
+            "placeholder": "Subheading",
+            "allowTargetBlank": true,
+            "single": "preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "Body",
+            "allowTargetBlank": true,
+            "single": "preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "cans_image": {
+          "type": "Image",
+          "config": {
+            "label": "Cans Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "second_heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Second Heading",
+            "placeholder": "Second Heading",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "second_body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Second Body",
+            "placeholder": "Second Body",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em"
+          }
         }
       },
       "items": {}
